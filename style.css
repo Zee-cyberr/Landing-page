@@ -1,0 +1,145 @@
+@font-face {
+    font-family: 'Poppins';
+    src: url('https://fonts.google.com/specimen/Poppins');
+    font-weight: 400;
+    
+}
+@font-face {
+    font-family: 'B-Poppins';
+    src: url('https://fonts.google.com/specimen/Poppins');
+    font-weight: 600;
+    
+}
+@font-face {
+    font-family: 'OpenSans';
+    src: url('https://fonts.google.com/specimen/Open+Sans');
+    font-weight: 400;
+    
+}
+
+body{
+    display: grid;
+    grid-template-columns:100px 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px ;
+    grid-template-rows:100px 100px 100px 100px 100px 100px 100px 100px ;
+    
+    padding: 20px;
+    background-color: hsl(257, 40%, 49%);
+    background-image: url("/images/bg-desktop.svg");
+}
+.logo{
+    width: 100%;
+    height: 100%;
+    grid-row-start: 1;
+    grid-column-start: 1;
+    grid-row-end: 2;
+    grid-column-end: 4;
+}
+.illustration{
+    width: 100%;
+    height: 100%;
+    grid-row-start: 2;
+    grid-column-start: 1;
+    grid-row-end: 8;
+    grid-column-end: 9;
+}
+.writing{
+    
+    grid-row-start: 3;
+    grid-column-start: 10;
+    grid-row-end: 6;
+    grid-column-end: 15;
+
+}
+
+.writing h1{
+    font-family: 'B-Poppins';
+    font-size: 40px;
+    color: white;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+.writing p{
+    font-family: 'OpenSans';
+    font-size: 16px;
+    color: white;
+    opacity: 0.8;
+
+}
+
+.writing button{
+    
+    background-color: white;
+    color: hsl(257, 40%, 49%);
+    border: none;
+    padding: 10px 20px;
+    font-family: 'Poppins';
+    font-size: 10px;
+    border-radius: 20px;
+    width: 150px;
+    height: 40px;
+    cursor: pointer;
+}
+.writing button:hover{
+    background-color: hsl(300, 69%, 71%);
+    color: white;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.icons{
+    margin: 30px;
+    gap: 20px;
+    
+    grid-row-start: 7;
+    grid-column-start: 13;
+    grid-row-end: 8;
+    grid-column-end: 15;
+}
+/*.img2{
+    
+    grid-row-start: 7;
+    grid-column-start: 14;
+    grid-row-end: 8;
+    grid-column-end: 15;
+}
+.img3{
+    
+    grid-row-start: 7;
+    grid-column-start: 15;
+    grid-row-end: 8;
+    grid-column-end: 16;
+}*/
+
+@media (max-width: 768px){
+    body{
+        display: flex;
+        flex-direction: column;
+        background-image: url("/images/bg-mobile.svg");
+       
+    }
+    .logo{
+        height: 20px;
+        width: 100px;
+        margin-bottom: 60px;
+
+    }
+    .writing{
+        align-items: center;
+        text-align: center;
+        margin-top: 30px;
+        
+    }
+    .writing h1{
+        font-size: 25px;
+    }
+    .writing p{
+        font-size: 14px;
+        opacity: 0.8;
+    }
+    .icons{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 7px;
+    }
+}
